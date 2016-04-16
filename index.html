@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework3-4</title>
+        <!--<script src="js/QBase.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/tmpl.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <script type="text/template" id="test">
+            <form action="#" class="questionForm">
+                <h1 class="header">Тест по-програмирыванию</h1>
+                <ol class="questionBlock">
+
+                    <li class="question">
+                        <% for(var i=0;i< data.length; i++) { %>
+                        <h2 class="questionText"><%= data[i].question %></h2>
+                        <% }; %>
+                        <% for(var i=0;i< data.length; i++) { %>
+                        <ol class="answerBlock">
+                            <li class="answer">
+                                <label class="answerLabel" for="check1_1"><%= data[i].answer[0] %></label>
+                                <input type="checkbox" class="answerCheck" id="check1_1">
+                            </li>
+                            <li class="answer">
+                                <label class="answerLabel" for="check1_2"><%= data[i].answer[1] %></label>
+                                <input type="checkbox" class="answerCheck" id="check1_2">
+                            </li>
+                            <li class="answer">
+                                <label class="answerLabel" for="check1_3"><%= data[i].answer[2] %></label>
+                                <input type="checkbox" class="answerCheck" id="check1_3">
+                            </li>
+                        </ol>
+                        <% }; %>
+                    </li>
+
+                    <li class="question">
+                        <% for(var i=0;i< dataSecond.length; i++) { %>
+                        <h2 class="questionText"><%= dataSecond[i].question %></h2>
+                        <% }; %>
+                        <% for(var i=0;i< dataSecond.length; i++) { %>
+                        <ol class="answerBlock">
+                            <li class="answer">
+                                <label class="answerLabel" for="check2_1"><%= dataSecond[i].answer[0] %></label>
+                                <input type="checkbox" class="answerCheck" id="check2_1">
+                            </li>
+                            <li class="answer">
+                                <label class="answerLabel" for="check2_2"><%= dataSecond[i].answer[1] %></label>
+                                <input type="checkbox" class="answerCheck" id="check2_2">
+                            </li>
+                            <li class="answer">
+                                <label class="answerLabel" for="check2_3"><%= dataSecond[i].answer[2] %></label>
+                                <input type="checkbox" class="answerCheck" id="check2_3">
+                            </li>
+                        </ol>
+                        <% }; %>
+                    </li>
+                </ol>
+                <input type="submit" value="Проверить мои результаты" class="answerButton">
+            </form>
+        </script>
+    </body>
+</html>
